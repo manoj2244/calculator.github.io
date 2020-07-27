@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>CALCULATOR</title>
+		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+				*{
+					margin: 0;
+					padding: 0;
+					box-sizing: border-box;
+				}
+				body{
+					background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("img/window.jpg") ;
+						
+							background-repeat: no-repeat;
+							background-position: center center;
+							
+							background-size: cover;
+							opacity: 0.89;
+						}
+						.container{
+							height: 100vh;
+							width: 100vw;
+							display: grid;
+							place-items: center;
+				}
+				form{
+					background-color: black;
+					height: 520px;
+					width: 400px;
+					box-shadow: 0 0 10px 1px grey;
+				}
+				.heading{
+					width: inherit;
+					background-color: #303030;
+					color: white;
+					padding: 2px 0 2px 12px;
+				}
+				#answer{
+					width: inherit;
+					height: 100px;
+					background-color: #303030;
+					color: white;
+					text-align: right;
+					border: none;
+					outline: none;
+					font-size: 2rem;
+				}
+				.layer1{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: inherit;
+				}
+				.layer1 input{
+					height: 90px;
+				}
+				.layer{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: inherit;
+
+				}
+				
+				.layer input{
+					height: 40px;
+					
+				}
+				input{
+					flex: 1;
+					font-size: 1.4rem;
+					color: white;
+					border: 1px solid #504f4f;
+					outline: none;
+				}
+				.input{
+					background-color: #101011;
+					color: white;
+				}
+				.input2{
+					background-color: #303030;
+				}
+				.clearbutton{
+					background-color: red;
+				}
+				input:hover{
+					background-color: #474747;
+					border: 1px solid gray;
+					border-radius: 5px;
+				}
+			
+		</style>
+		
+	</head>
+	<body>
+		<div class="container">
+			<form action="" name="cal">
+				<div class="heading">Calculator</div>
+				<input type="text" name="answer" id="answer">
+				<div class="layer"><input type="button"  class="clearbutton" value="C" onclick="cal.answer.value=' ' ">
+				
+				<input type="button" class="input2" id="input1" value="=" onclick="cal.answer.value=eval(cal.answer.value)">
+			</div>
+			<div class="layer1">
+				<input type="button" class="input" id="input1" value="7" onclick="cal.answer.value+='7' ">
+				<input type="button" class="input" id="input1" value="8" onclick="cal.answer.value+='8' ">
+				<input type="button" class="input" id="input1" value="9" onclick="cal.answer.value+='9' ">
+				<input type="button" class="input2" id="input1" value="*" onclick="cal.answer.value+='*' ">
+			</div>
+			<div class="layer1">
+				<input type="button" class="input" id="input1" value="4" onclick="cal.answer.value+='4' ">
+				<input type="button" class="input" id="input1" value="5" onclick="cal.answer.value+='5' ">
+				<input type="button" class="input" id="input1" value="6" onclick="cal.answer.value+='6' ">
+				<input type="button" class="input2" id="input1" value="+" onclick="cal.answer.value+='+' ">
+			</div>
+			<div class="layer1">
+				<input type="button" class="input" id="input1" value="1" onclick="cal.answer.value+='1' ">
+				<input type="button" class="input" id="input1" value="2" onclick="cal.answer.value+='2' ">
+				<input type="button" class="input" id="input1" value="3" onclick="cal.answer.value+='3' ">
+				<input type="button" class="input2" id="input1" value="-" onclick="cal.answer.value+='-' ">
+			</div>
+			<div class="layer1">
+				<input type="button" class="input2" id="input1" value="%" onclick="cal.answer.value+='%' ">
+				<input type="button" class="input" id="input1" value="0" onclick="cal.answer.value+='0' ">
+				<input type="button" class="input2" id="input1" value="." onclick="cal.answer.value+='.' ">
+				<input type="button" value="/" class="input2" onclick="cal.answer.value+='/' ">
+				
+			</div>
+		</form>
+		
+	</div>
+	<footer style="font-size: 17px;  text-align: center; color: white;"><p>Copyright  &copy; www.onlinecalculator.com.np.All Right Reserved 2020.manoj nepali</p></footer>
+	
+</body>
+</html>
